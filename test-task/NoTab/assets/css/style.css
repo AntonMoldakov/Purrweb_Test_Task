@@ -49,11 +49,9 @@ a:hover {
 
 /* Container */
 .container {
-    /* overflow: hidden; */
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    /*padding: 0 15px;*/
 }
 
 /* Header */
@@ -70,7 +68,6 @@ a:hover {
 
 .header__inner {
     display: flex;
-    /* align-items: center; */
     height: 100%;
 }
 
@@ -152,11 +149,15 @@ a:hover {
 
 .intro__img-iphone {
     position: relative;
+    width: 100%;
+    height: 100%;
     z-index: 1;
 }
 
 .intro__img-elipse {
     position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     right: 0;
     z-index: 1
@@ -281,6 +282,10 @@ a:hover {
     margin-top: 200px;
 }
 
+.section-overflow {
+    overflow: hidden;
+}
+
 /* Contact__group */
 .contact__group {
     padding: 0 5%;
@@ -318,6 +323,9 @@ a:hover {
 }
 
 /* Content */
+.content {
+    overflow: hidden;
+}
 .content__title {
     position: relative;
     margin-bottom: 20px;
@@ -342,13 +350,20 @@ a:hover {
 /* Our-mission */
 .our-mission {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.our-mission__imgs-1 {
+    max-width: 60%;
 }
 
 .our-mission__img {
     display: flex;
-    position: absolute;
-    left: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 10%;
 }
 
 .our-mission__img-bg {
@@ -363,7 +378,7 @@ a:hover {
 
 .our-mission__box {
     /*max-width: 27%;*/
-    max-width: 32%;
+    max-width: 40%;
     padding-right: 5%;
 }
 
@@ -395,22 +410,25 @@ a:hover {
     height: 300px;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
     align-items: end;
     z-index: 10;
+    justify-content: space-between;
 }
 
 .id-scanner__imgs {
     position: relative;
-    bottom: 400px;
+    bottom: 25vw;
     width: 60%;
     display: flex;
     justify-content: space-between;
 }
 
 .id-scanner__box {
-    width: 40%;
-    padding-left: 9%;
-    padding-right: 4.5%;
+    position: relative;
+    bottom: 25vw;
+    max-width: 40%;
 }
 
 .id-scanner__imgs-2 {
@@ -421,10 +439,20 @@ a:hover {
 .bll {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .bll__box {
     width: 45%;
+}
+
+.bll_img_m {
+    width: 100%;
+    display: none;
+}
+
+.bll_img_m img {
+    width: 100%;
 }
 
 .bll__imgs {
@@ -487,20 +515,39 @@ a:hover {
 }
 
 /* QRcode */
-.qr-code__header {
+
+
+.qr-code {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.qr-code__box-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 55%;
+}
+
+.qr-code__box-2 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    z-index: 5;
+}
+
+.bg {
     width: 100%;
 }
 
-.qr-code__header div {
-    background: url("../img/QRcode/QRcodeBg-blur.png") center no-repeat;
-    background-size: cover;
-    display: flex;
-    position: absolute;
-    width: 100%;
-    min-height: 100%;
-    z-index: 3;
+.qr-code__content {
+    width: 50%;
+    position: relative;
+    bottom: 6vw;
+    z-index: 6;
 }
+
 
 .qr-code__bg-label {
     position: absolute;
@@ -508,32 +555,23 @@ a:hover {
     z-index: 10;
 }
 
-.qr-code__header .bg {
-    position: relative;
-    width: 50%;
-    z-index: 2;
-}
-
-.qr-code {
-    display: flex;
-    position: relative;
-    bottom: 150px;
-    z-index: 6;
-}
-
-.qr-code__box {
-    width: 40%;
-}
 
 .qr-code__img {
+    padding-right: 5%;
     display: flex;
     width: 60%;
     justify-content: space-between;
 }
 
+
 .qr-code__img-1 {
-    bottom: 300px;
+    right: 30%;
+    bottom: 15vw;
     position: relative;
+}
+
+.qr-code__footer {
+    justify-content: flex-start;
 }
 
 .qr-code-generate__content {
@@ -541,14 +579,13 @@ a:hover {
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom: 140px;
 }
 
 .qr-code-generate-blur {
     display: flex;
     position: absolute;
     width: 80%;
-    height: 150%;
+    height: 70vw;
     background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
     opacity: 0.25;
     filter: blur(250px);
@@ -583,12 +620,14 @@ a:hover {
 }
 
 .qr-code-generate__footer {
+    padding: 0 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 /* Advantages */
+
 .advantages {
     margin-bottom: 180px;
 }
@@ -605,7 +644,6 @@ a:hover {
     right: 0;
     background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
     filter: blur(100px);
-    transform: rotate(5.78deg);
 }
 
 .advantages__content {
@@ -615,6 +653,7 @@ a:hover {
 
 .advantages__elements {
     position: absolute;
+    z-index: 10;
 }
 
 .advantages__element {
@@ -630,6 +669,7 @@ a:hover {
     border: 1px solid rgba(255, 255, 255, .5);
     border-radius: 18px;
     background-color: #000;
+    z-index: 1;
 }
 
 .advantages__element-1 {
@@ -658,6 +698,12 @@ a:hover {
     height: 91px;
     top: 360px;
     left: 410px;
+}
+
+.advantages__iphone {
+    position: relative;
+    width: 80%;
+    z-index: 5;
 }
 
 /* Notab */
@@ -702,7 +748,6 @@ a:hover {
     top: -10px;
     background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
     filter: blur(100px);
-    transform: rotate(5.78deg);
 }
 
 .feedback__elipse-form {
@@ -713,10 +758,11 @@ a:hover {
     /* top: 0px; */
     background: linear-gradient(12.08deg, #F101BF 2.82%, #0066FF 97.06%);
     filter: blur(100px);
-    transform: rotate(5.78deg);
 }
 
 .feedback__content {
+    display: flex;
+    justify-content: center;
     margin-top: 82px;
 }
 
@@ -724,12 +770,14 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-   max-width: 818px;
+    max-width: 818px;
+    width: 90%;
 }
 
 .feedback__form-50g {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -764,7 +812,9 @@ a:hover {
 
 .feedback__btn {
     margin-top: 60px;
-    padding: 25px 167px;
+    height: 80px;
+    max-width: 398px;
+    width: 100%;
 
     background: none;
     border: 1px solid white;
@@ -798,7 +848,9 @@ a:hover {
 }
 
 /* Footer */
-
+footer {
+    overflow: hidden;
+}
 .footer {
     padding-bottom: 85px;
     display: flex;
@@ -840,57 +892,331 @@ a:hover {
     width: 292px;
 }
 
-/* @media (max-width: 960px) {
+@media (max-width: 1280px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Intro */
+    .intro__body {
+        margin: 0;
+    }
+
+    .intro__body p {
+        right: 0;
+    }
+
+    .intro__body__line {
+        display: none;
+    }
+
+    .intro__body__elipse {
+        position: absolute;
+        left: 0;
+        bottom: auto;
+    }
+
+    .intro__img {
+        margin: 0;
+    }
+
+    .intro__img-bg {
+        display: none;
+    }
+
+    /* Contact */
+    .contact__group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact__item {
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* idScanner */
+    .id-scanner__imgs img {
+        width: 45%;
+    }
+
+    /* QRcode */
+    .qr-code__img-1 {
+        right: 15%;
+    }
+
+    /* Advantages */
+}
+
+
+@media (max-width: 1024px) {
     /* Header */
     .header__inner {
         padding-right: 15px;
         justify-content: space-between;
     }
 
+    /* Intro */
     .intro__title {
         font-size: 48px;
     }
 
-    .container {
-        padding-left: 15px;
-        padding-right: 15px;
+    .intro__footer {
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
     }
 
-    .popup-cookie {
-        padding-left: 24px;
+    .intro__footer__text {
+        margin-bottom: 35px;
     }
 
-    .intro__body p {
-        right: 200px;
+    /* OurMission */
+    .our-mission__box {
+        padding-left: 5%;
+        max-width: none;
     }
-}
 
-@media (max-width: 720px) {
-    .intro__body__line {
+    .our-mission__imgs-1 {
         display: none;
     }
 
-    .intro__body {
+    .our-mission-elipse {
+        left: 0;
+    }
+
+    .our-mission__imgs  {
+        display: block;
+    }
+    .our-mission__imgs img {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* idScanner */
+    .section__id-scanner {
+        margin-top: 0;
+    }
+
+    .id-scanner__content {
+        height: auto;
+    }
+
+    .id-scanner__box {
+        max-width: none;
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    .id-scanner__imgs {
+        width: 100%;
         display: flex;
-        /* margin-top: 170px; */
-        /* margin-left: 100px; */
-        font-size: 20px;
-        font-weight: 400;
+        bottom: auto;
+        justify-content: space-around;
     }
 
-    .intro__body p {
-        right: 0;
+    .id-scanner__imgs img {
+        width: 30%;
+    }
+
+    /* Bll */
+
+    .bll__box {
+        padding-left: 5%;
+    }
+
+    .bll__imgs {
+        display: flex;
+        width: 100%;
+    }
+
+    .bll_img-1 {
+        left: 45%;
+    }
+    .bll_img-2 {
+        right: 20%;
+        top: 105px
+    }
+    .bll_img-3 {
+        left: 25%;
+    }
+    .bll_img-4 {
+        right: 45%;
+    }
+    .bll_img-5 {
+        top: 100px;
+    }
+
+    /* QRcode */
+    .qr-code__box-1 {
+        width: 100%;
+    }
+    .qr-code__content {
+        padding-left: 5%;
+        width: 100%;
+    }
+    .qr-code__box-2 {
+        width: 100%;
+    }
+    .qr-code__img {
+        padding: 0;
+        position: relative;
+        width: 100%;
+        justify-content: space-around;
+        bottom: 15vw;
+    }
+    .qr-code__img-1 {
+        right: auto;
+    }
+    .qr-code-generate__label {
+        right: 10vw;
+        top: +750px;
+    }
+    .qr-code-generate__arrow {
+        right: 0px;
+        bottom: 60px;
+        transform: rotate(50deg);
+    }
+    .qr-code-generate {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* Advantages */
+    .advantages {
+        margin-bottom: 0;
+    }
+    .advantages__elements div {
+        font-size: 14px;
+    }
+    .advantages__element-1 {
+        width: 165px;
+        height: 57px;
+        top: 1vw;
+        right: 30px;
+    }
+    .advantages__element-2 {
+        width: 171px;
+        height: 62px;
+        top: 2vw;
+    }
+    .advantages__element-3 {
+        width: 107px;
+        height: 43px;
+        top: 50vw;
+    }
+    .advantages__element-4 {
+        width: 122px;
+        height: 58px;
+        top: 50vw;
+        left: 200px;
+    }
+
+    /* Notab */
+    .notab-phone {
+        width: 80%;
     }
 }
 
-@media (max-width: 544px) {
-}
-
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     body {
         font-size: 16px;
     }
+    /* Intro */
+    .intro__footer__text {
+        width: 100%;
+        font-size: 24px;
+    }
+    .intro__title {
+        font-size: 35px;
+    }
+    .intro__body p {
+        font-size: 16px;
+    }
 
+    /* Cookie */
+    .popup-cookie {
+        padding-left: 15px;
+        padding-right: 22px;
+    }
+
+    .popup-cookie p {
+        font-size: 12px;
+    }
+
+    .popup_btn {
+        font-size: 14px;
+        height: 50px;
+        width: 92px;
+    }
+
+    /* Bll */
+    .bll__box {
+        width: 100%;
+    }
+    .bll__box__elipse {
+        display: none;
+    }
+    .bll__imgs {
+        display: none;
+    }
+    .bll_img_m {
+        display: block;
+    }
+
+    /* QRcode */
+    .qr-code__box-1 {
+        width: 100%;
+    }
+    .qr-code__box-2 {
+        width: 100%;
+    }
+    .qr-code__img {
+        flex-wrap: wrap;
+        justify-content: center;
+        bottom: 5vw;
+    }
+
+    .qr-code__img img {
+        width: 55%;
+    }
+    .qr-code-generate__footer {
+        margin-top: 130px;
+        margin-bottom: 70px;
+        flex-wrap: wrap;
+    }
+    .content__title {
+        width: 100%;
+    }
+    /* Advantages */
+    .advantages__header {
+        text-align: start;
+        margin-bottom: 140px;
+    }
+
+    /* Btn-download */
+    .btn-download {
+        margin: 0 auto;
+        flex-wrap: wrap;
+        width:200px;
+    }
+
+    .btn-download a {
+        display: block;
+        margin-bottom: 24px;
+        height: 60px;
+        width: 185px;
+        /* width: 100% */
+    }
+
+    .btn-download img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 533px) {
+    /* Header */
     .header__logo-cube {
         width: 51px;
         height: 51px;
@@ -909,96 +1235,31 @@ a:hover {
         font-size: 14px;
     }
 
-    .intro__title {
-        font-size: 35px;
-    }
-
-    .intro__body p {
-        font-size: 16px;
-    }
-
-    .intro__body {
-        margin: 0;
-    }
-
-    .intro__body__elipse {
-        position: absolute;
-        bottom: 200px;
-    }
-
+    /* Intro */
     .intro__inner {
         align-items: center;
     }
 
-    .intro__content {
-        width: 70%;
-        padding: 0;
+    .intro__img {
+        width: 35%;
+        overflow: hidden;
+        margin-right: -15px;
     }
 
-    .intro__img {
-        width: 30%;
-        left: 30%;
-        margin-left: 0;
-        justify-content: flex-start;
+    .intro__content {
+        width: 75%;
     }
 
     .intro__img-iphone {
-        height: 333px;
+        position: relative;
+        left: 20%;
     }
 
-    .intro__img-bg {
-        display: none;
-    }
-
-    .intro__img-elipse {
-        right: -400px;
-    }
-
-    .intro__footer {
-        flex-wrap: wrap;
-    }
-
-    .intro__footer__text {
-        padding-bottom: 34px;
-        text-align: center;
-        font-size: 24px;
-        width: 100%;
-    }
-
-    .btn-download {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .btn-download a {
-        margin-bottom: 24px;
-        height: 60px;
-        width: 185px;
-    }
-
-    .btn-download img {
-        height: 100%;
-        width: 100%;
-    }
-
-    .popup-cookie p {
-        font-size: 12px;
-    }
-
-    .popup_btn {
-        font-size: 14px;
-        height: 50px;
-        width: 92px;
-    }
-
-    .contact__group {
-        flex-wrap: wrap;
-    }
-
+    /* Contact */
     .contact__item {
+        margin-right: 0;
         padding: 40px 0 40px 35px;
         height: auto;
-        margin-bottom: 30px;
         border: 1px solid rgba(255,255,255,0.5);
     }
 
@@ -1010,16 +1271,12 @@ a:hover {
         font-size: 18px;
     }
 
-    .login__btn.contact__login__btn {
-        font-size: 18px;
-        margin: 0;
+    /* Section */
+    .section {
+        padding: 40px 0;
     }
 
-    .our-mission__box {
-        width: 95%;
-        max-width: none;
-    }
-
+    /* Content */
     .content__title {
         font-size: 24px;
     }
@@ -1028,139 +1285,137 @@ a:hover {
         font-size: 16px;
     }
 
-    .section-contact {
-        position: relative;
-        z-index: 0;
+    /* OurMission */
+    .section-our-mission {
+        padding-top: 0px;
     }
 
-    .our-mission {
+    .our-mission__box {
+        margin-bottom: 100px;
+    }
+
+    /* idScanner */
+    .id-scanner__imgs {
         flex-wrap: wrap;
-    }
-
-    .our-mission-elipse {
-        left: 0;
-    }
-
-    .our-mission__imgs-1 {
-        display: none;
-    }
-
-    .our-mission__imgs {
-        margin-top: 140px;
-        display: flex;
-        width: 100%;
-        display: block;
         justify-content: center;
     }
 
-    .section-our-mission {
-        position: relative;
-        z-index: 1;
+    .id-scanner__imgs img {
+        margin-bottom: 55px;
+        width: 80%
     }
 
-    .our-mission-elipse {
-        position: absolute;
+    /* QRcode */
+    .qr-code__box-1 {
+        width: 100%;
+    }
+    .qr-code__box-2 {
+        width: 100%;
+    }
+    .qr-code__img {
+        flex-wrap: wrap;
+        justify-content: center;
+        bottom: 5vw;
+    }
+
+    .qr-code__img img {
+        width: 80%;
+    }
+
+    .qr-code__footer {
+        justify-content: center;
+    }
+    .section-qr-code {
+        padding-bottom: 150px;
+    }
+
+    .qr-code-generate__arrow {
+        display: none;
+    }
+
+    /* Advantages */
+    .advantages__element-1 {
+        top: -10vw;
+        right: 70px;
+    }
+    .advantages__element-2 {
+        left: 90px;
+    }
+    .advantages__element-3 {
+        right: 40px;
+    }
+    .advantages__element-4 {
+        left: 100px;
+    }
+
+    /* Notab */
+    .notab {
+        display: none;
+    }
+
+    /* Feddback */
+    .feedback__input-50g {
+        width: 100%;
+    }
+    .feedback__elipse {
+        left: 0;
+    }
+
+    /* Footer */
+    .footer {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .footer__contact {
+    }
+    .footer__terms {
+        margin-bottom: 50px;
+        font-size: 18px;
+    }
+    .footer__content, .copyright {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    /* Header */
+    .login__btn.contact__login__btn {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    /* Intro */
+    .intro__content {
+        width: 100%;
+    }
+
+    .intro__img-iphone {
+        display: none;
+    }
+
+    /* QrCode */
+    .qr-code-generate-iphone {
+        width: 80%;
+    }
+
+    .qr-code-generate__label {
+        display: none;
+    }
+
+    /* Advantages */
+    .advantages__elements {
+        display: none;
+    }
+    .advantages__iphone {
+        width: 100%;
     }
 
     .section {
         padding: 40px 0;
     }
 
-    .section__id-scanner {
-        margin: 0;
-    }
 
-    .id-scanner__content {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .id-scanner__imgs {
-        display: none;
-    }
-
-    .id-scanner__box {
-        width: 100%;
-        padding: 0;
-        margin-bottom: 70px;
-    }
-
-    .id-scanner__imgs-2 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .id-scanner__imgs-2 img {
-        width: 287px;
-        height: 576px;
-        margin-bottom: 55px;
-    }
-
-    .id-scanner__content {
-        height: auto;
-    }
-
-    .bll {
-        flex-wrap: wrap;
-    }
-
-    .bll__box__elipse {
-        display: none
-    }
-
-    .bll__box {
-        width: 100%;
-    }
-
-    .bll__imgs {
-        width: 100%;
-        height: 300px
-    }
-
-    .bll_img-1 {
-        right: 11%;
-        top: 160px;
-        width: 30%;
-        left: auto;
-    }
-
-    .bll_img-2 {
-        right: 25%;
-        top: 10px;
-        width: 30%;
-    }
-
-    .bll_img-3 {
-        left: 10%;
-        width: 25%;
-        top: 20px;
-    }
-
-    .bll_img-4 {
-        display: none;
-    }
-
-    .bll_img-5 {
-        left: 50%;
-        bottom: 43px;
-        z-index: 2;
-        width: 25%;
-        right: auto;
-        top: auto;
-    }
-
-    .bll_img-6 {
-        left: 6%;
-        top: 20px;
-        width: 28%;
-        z-index: 1;
-    }
-
-    .bll_img-7 {
-        left: 45%;
-        top: 50px;
-        z-index: 1;
-    }
-} */
+}
